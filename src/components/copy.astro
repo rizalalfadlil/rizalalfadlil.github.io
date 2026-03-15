@@ -1,0 +1,20 @@
+<script>
+  const text = "email@mail.com";
+  const temp = document.getElementById("text");
+  const copyText = () => {
+    if (temp?.textContent) {
+      temp.textContent = "copied";
+      setTimeout(() => {
+        temp.textContent = text;
+      }, 1000);
+    }
+  };
+  document.getElementById("button")?.addEventListener("click", copyText);
+</script>
+
+<span
+  id="button"
+  class="inline-flex gap-2 items-center text-gray-800 hover:bg-gray-300 rounded select-none duration-300 transition-all p-1"
+  ><img src="image2.png" width="24" class="aspect-square rounded" alt="" />
+  <span id="text">email@mail.com</span></span
+>

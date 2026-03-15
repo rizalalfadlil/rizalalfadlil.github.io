@@ -1,11 +1,97 @@
 ---
-import Welcome from '../components/Welcome.astro';
-import Layout from '../layouts/Layout.astro';
-
+import Welcome from "../components/Welcome.astro";
+import Layout from "../layouts/Layout.astro";
+import "../styles/global.css";
+import Chip from "../components/chip.astro";
+import Image from "../components/image.astro";
+import Copy from "../components/copy.astro"
 // Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
 // Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
 ---
 
+<style>
+  h1 {
+    font-size: 2.5rem;
+    font-weight: 700;
+  }
+  h2 {
+    font-size: 2rem;
+    font-weight: 600;
+  }
+  h3 {
+    font-size: 1.75rem;
+    font-weight: 600;
+  }
+  h4 {
+    font-size: 1.5rem;
+    font-weight: 500;
+  }
+  h5 {
+    font-size: 1.25rem;
+    font-weight: 500;
+  }
+  h6 {
+    font-size: 1rem;
+    font-weight: 400;
+  }
+  section {
+    margin-bottom: 2rem;
+  }
+  hr {
+    border: none;
+    border-top: 1px solid #ccc;
+    margin: 1rem 0;
+  }
+  p {
+    margin-bottom: 1rem;
+    line-height: 1.6;
+  }
+</style>
 <Layout>
-	<Welcome />
+  <main class="max-w-5xl mx-auto px-4 py-8">
+    <section>
+      <h2>about</h2>
+      <hr />
+      <p>
+        background description Lorem ipsum dolor sit amet, consectetur
+        adipisicing elit. Consequuntur temporibus saepe delectus, error vitae
+        animi sequi illum consectetur doloremque laborum obcaecati magni, porro
+        ea, officia exercitationem aliquid suscipit quis debitis?
+      </p>
+      <p>
+        skills description Lorem ipsum dolor sit amet, consectetur adipisicing
+        elit. Consequuntur temporibus saepe delectus, error vitae animi sequi
+        illum consectetur doloremque laborum obcaecati magni, porro ea, officia
+        exercitationem aliquid suscipit quis debitis?
+        <Chip />
+        <Chip />
+        <Chip />
+
+        <p>
+          Lorem ipsum dolor sit amet consectetur, adipisicing elit. Porro ipsam
+          inventore aspernatur? Molestiae ut sunt, cum enim illo quibusdam
+          asperiores rem vel laboriosam impedit quas quod.
+        </p>
+       <Copy/>
+      </p>
+    </section>
+    <section>
+      <h2>projects</h2>
+      <hr />
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing.</p>
+      <Image />
+      <Image />
+      <Image />
+      <p>
+        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Velit
+        distinctio quas asperiores vero architecto dolores hic, sunt nesciunt,
+        reprehenderit placeat quod non. Unde deserunt expedita esse temporibus
+        nulla odit eveniet corporis exercitationem?
+      </p>
+    </section>
+    <section>
+      <h2>additional information</h2>
+      <hr />
+    </section>
+  </main>
 </Layout>

@@ -1,20 +1,14 @@
-<script>
-  const text = "email@mail.com";
-  const temp = document.getElementById("text");
-  const copyText = () => {
-    if (temp?.textContent) {
-      temp.textContent = "copied";
-      setTimeout(() => {
-        temp.textContent = text;
-      }, 1000);
-    }
-  };
-  document.getElementById("button")?.addEventListener("click", copyText);
-</script>
+---
+let text = Astro.props.text;
+let icon = Astro.props.icon || "image2.png";
+---
 
 <span
   id="button"
-  class="inline-flex gap-2 items-center text-gray-800 hover:bg-gray-300 rounded select-none duration-300 transition-all p-1"
-  ><img src="image2.png" width="24" class="aspect-square rounded" alt="" />
-  <span id="text">email@mail.com</span></span
+  data-text={text}
+  onclick="const text = this.dataset.text; navigator.clipboard.writeText(text); this.querySelector('span').textContent='copied'; setTimeout(() => this.querySelector('span').textContent=text, 1000)"
+  class="inline-flex gap-2 items-center text-gray-800 border border-gray-300 hover:bg-gray-100 rounded select-none cursor-pointer duration-300 transition-all p-1"
 >
+  <img src={icon} width="24" class="aspect-square rounded" alt="" />
+  <span id="text">{text}</span>
+</span>

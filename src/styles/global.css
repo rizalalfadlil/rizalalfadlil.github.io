@@ -1,1 +1,43 @@
 @import "tailwindcss";
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap');
+h1 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: rgb(122, 122, 122);
+  font-family: 'Oswald', sans-serif;
+}
+h2 {
+  font-size: 2rem;
+  font-weight: 600;
+  color: rgb(4, 64, 175);
+  font-family: 'Oswald', sans-serif;
+  text-transform: uppercase;
+}
+h3 {
+  font-size: 1.75rem;
+  font-weight: 600;
+}
+h4 {
+  font-size: 1.5rem;
+  font-weight: 500;
+}
+h5 {
+  font-size: 1.25rem;
+  font-weight: 500;
+}
+h6 {
+  font-size: 1rem;
+  font-weight: 400;
+}
+section {
+  margin-bottom: 2rem;
+}
+hr {
+  border: none;
+  border-top: 1px solid #ccc;
+  margin: 1rem 0;
+}
+p {
+  margin-bottom: 1rem;
+  line-height: 1.6;
+}

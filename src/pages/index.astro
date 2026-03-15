@@ -4,49 +4,12 @@ import Layout from "../layouts/Layout.astro";
 import "../styles/global.css";
 import Chip from "../components/chip.astro";
 import Image from "../components/image.astro";
-import Copy from "../components/copy.astro"
+import Copy from "../components/copy.astro";
+import IconLink from "../components/iconLink.astro";
 // Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
 // Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
 ---
 
-<style>
-  h1 {
-    font-size: 2.5rem;
-    font-weight: 700;
-  }
-  h2 {
-    font-size: 2rem;
-    font-weight: 600;
-  }
-  h3 {
-    font-size: 1.75rem;
-    font-weight: 600;
-  }
-  h4 {
-    font-size: 1.5rem;
-    font-weight: 500;
-  }
-  h5 {
-    font-size: 1.25rem;
-    font-weight: 500;
-  }
-  h6 {
-    font-size: 1rem;
-    font-weight: 400;
-  }
-  section {
-    margin-bottom: 2rem;
-  }
-  hr {
-    border: none;
-    border-top: 1px solid #ccc;
-    margin: 1rem 0;
-  }
-  p {
-    margin-bottom: 1rem;
-    line-height: 1.6;
-  }
-</style>
 <Layout>
   <main class="max-w-5xl mx-auto px-4 py-8">
     <section>
@@ -63,35 +26,64 @@ import Copy from "../components/copy.astro"
         elit. Consequuntur temporibus saepe delectus, error vitae animi sequi
         illum consectetur doloremque laborum obcaecati magni, porro ea, officia
         exercitationem aliquid suscipit quis debitis?
-        <Chip />
-        <Chip />
-        <Chip />
+        <Chip
+          name="javascript"
+          icon="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/javascript/javascript-original.svg"
+          color="#f7df1e"
+        />
+        <Chip
+          name="typescript"
+          icon="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/typescript/typescript-original.svg"
+          color="#3178c6"
+        />
+        <Chip
+          name="python"
+          icon="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/python/python-original.svg"
+          color="#3776ab"
+        />
 
         <p>
           Lorem ipsum dolor sit amet consectetur, adipisicing elit. Porro ipsam
           inventore aspernatur? Molestiae ut sunt, cum enim illo quibusdam
           asperiores rem vel laboriosam impedit quas quod.
         </p>
-       <Copy/>
+        <div>
+          <Copy
+            text="email@example.com"
+            icon="https://img.icons8.com/material-rounded/24/new-post.png"
+          />
+          <Copy
+            text="081234567890"
+            icon="https://img.icons8.com/ios-filled/50/phone.png"
+          />
+        </div>
+        <div class="mt-2">
+          <IconLink
+            text="https://github.com/RizalAlfadlil"
+            icon="https://img.icons8.com/material-rounded/48/github.png"
+          />
+          <IconLink
+            text="https://linkedin.com"
+            icon="https://img.icons8.com/material-rounded/48/linkedin.png"
+          />
+        </div>
       </p>
     </section>
     <section>
       <h2>projects</h2>
       <hr />
       <p>Lorem ipsum dolor sit amet consectetur adipisicing.</p>
-      <Image />
-      <Image />
-      <Image />
+      <div class="grid grid-cols-3 gap-2">
+        <Image src="image.png" alt="image" title="image" url="https://example.com" />
+        <Image src="image.png" alt="image" title="image" url="https://example.com" />
+        <Image src="image.png" alt="image" title="image" url="https://example.com" />
+      </div>
       <p>
         Lorem, ipsum dolor sit amet consectetur adipisicing elit. Velit
         distinctio quas asperiores vero architecto dolores hic, sunt nesciunt,
         reprehenderit placeat quod non. Unde deserunt expedita esse temporibus
         nulla odit eveniet corporis exercitationem?
       </p>
-    </section>
-    <section>
-      <h2>additional information</h2>
-      <hr />
     </section>
   </main>
 </Layout>

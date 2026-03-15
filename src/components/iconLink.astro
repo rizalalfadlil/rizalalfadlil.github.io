@@ -1,0 +1,12 @@
+---
+const { text: url, icon } = Astro.props;
+---
+
+<a
+  href={url}
+  target="_blank"
+  rel="noopener noreferrer"
+  class="inline-flex items-center gap-2 text-gray-800 hover:bg-gray-100 rounded select-none cursor-pointer duration-300 transition-all p-1"
+>
+  <img src={icon} width="32" class="aspect-square rounded" alt="" />
+</a>

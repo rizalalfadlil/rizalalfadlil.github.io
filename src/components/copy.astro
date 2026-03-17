@@ -1,14 +1,18 @@
 ---
-let text = Astro.props.text;
-let icon = Astro.props.icon || "image2.png";
+import { Icon } from "astro-icon/components";
+const { text, icon } = Astro.props;
+const isPhone = Number.isInteger(Number(text.replace(/\D/g, "")));
+const displayText = isPhone
+  ? text.replace(/(\d{2})(\d{3})(\d{4})(\d{4})/, "+$1-$2-$3-$4")
+  : text;
 ---
 
 <span
   id="button"
   data-text={text}
   onclick="const text = this.dataset.text; navigator.clipboard.writeText(text); this.querySelector('span').textContent='copied'; setTimeout(() => this.querySelector('span').textContent=text, 1000)"
-  class="inline-flex gap-2 items-center text-gray-800 border border-gray-300 hover:bg-gray-100 rounded select-none cursor-pointer duration-300 transition-all p-1"
+  class="inline-flex gap-2 items-center text-blue-500 border border-blue-300 hover:bg-blue-100 rounded select-none cursor-pointer duration-300 transition-all p-1 px-2"
 >
-  <img src={icon} width="24" class="aspect-square rounded" alt="" />
-  <span id="text">{text}</span>
+  <Icon name={icon} size={24} class="text-blue-500"/>
+  <span id="text">{displayText}</span>
 </span>

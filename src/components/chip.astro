@@ -6,12 +6,12 @@ interface Props {
   color?: string;
 }
 
-const { name, icon, color = "yellow-600" } = Astro.props;
+const { name, icon, color} = Astro.props;
 
 ---
 
 <span
-  class={`border inline-flex rounded-full p-0.5 px-2 me-2 text-sm gap-2`}
+  class={`border inline-flex rounded-full p-0.5 px-2 text-xs gap-2`}
   style={{
     borderColor: color,
     color: color,

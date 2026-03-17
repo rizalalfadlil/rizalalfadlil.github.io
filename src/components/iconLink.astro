@@ -1,4 +1,5 @@
 ---
+import { Icon } from "astro-icon/components";
 const { text: url, icon } = Astro.props;
 ---
 
@@ -6,7 +7,11 @@ const { text: url, icon } = Astro.props;
   href={url}
   target="_blank"
   rel="noopener noreferrer"
-  class="inline-flex items-center gap-2 text-gray-800 hover:bg-gray-100 rounded select-none cursor-pointer duration-300 transition-all p-1"
+  class="inline-flex items-center gap-2 text-blue-800 hover:bg-blue-100 rounded select-none cursor-pointer duration-300 transition-all p-1"
 >
-  <img src={icon} width="32" class="aspect-square rounded" alt="" />
+  {icon ? (
+    <Icon name={icon} size={32} class="text-blue-500" />
+  ) : (
+    <slot />
+  )}
 </a>

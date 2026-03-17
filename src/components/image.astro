@@ -1,13 +1,13 @@
 ---
-const { src, alt, title, url } = Astro.props;
+const { src, title, url } = Astro.props;
 ---
 
-<a href={url} class="w-full p-2 space-y-2 inline-block hover:scale-105 transition-all"
+<a href={url} class="w-[calc(33.333%-0.5rem)] p-2 ps-3 space-y-2 inline-block hover:scale-105 transition-all"
 >
   <img
     src={src}
-    alt={alt}
+    alt={title}
     class="aspect-video object-cover object-center rounded"
   />
-  <p class="text-sm text-center">{title}</p>
+  <p class="text-xs text-center text-blue-400">{title}</p>
 </a>

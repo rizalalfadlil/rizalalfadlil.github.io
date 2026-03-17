@@ -6,83 +6,110 @@ import Chip from "../components/chip.astro";
 import Image from "../components/image.astro";
 import Copy from "../components/copy.astro";
 import IconLink from "../components/iconLink.astro";
+import { Icon } from "astro-icon/components";
 // Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
 // Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
 ---
 
 <Layout>
-  <main class="max-w-5xl mx-auto px-4 py-8">
+  <main class="max-w-5xl mx-auto px-4 py-8 text-lg text-blue-800 font-medium">
     <section>
-      <h2>about</h2>
+      <h2>RizalAlfadlil | Developer Portfolio</h2>
       <hr />
       <p>
-        background description Lorem ipsum dolor sit amet, consectetur
-        adipisicing elit. Consequuntur temporibus saepe delectus, error vitae
-        animi sequi illum consectetur doloremque laborum obcaecati magni, porro
-        ea, officia exercitationem aliquid suscipit quis debitis?
+        Hello, i'm Hafidz Rizal Al-fadlil, a software developer based in
+        Indonesia.
       </p>
       <p>
-        skills description Lorem ipsum dolor sit amet, consectetur adipisicing
-        elit. Consequuntur temporibus saepe delectus, error vitae animi sequi
-        illum consectetur doloremque laborum obcaecati magni, porro ea, officia
-        exercitationem aliquid suscipit quis debitis?
-        <Chip
+        I like to create web applications and explore new technologies. i have
+        experience in <Chip
           name="javascript"
           icon="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/javascript/javascript-original.svg"
-          color="#f7df1e"
-        />
-        <Chip
+          color="orange"
+        />, <Chip
           name="typescript"
           icon="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/typescript/typescript-original.svg"
           color="#3178c6"
-        />
+        /> and <Chip
+          name="php"
+          icon="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/php/php-original.svg"
+          color="#777bb4"
+        />. languages and technologies like <Chip
+          name="react"
+          icon="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/react/react-original.svg"
+          color="#61dafb"
+        />,
         <Chip
-          name="python"
-          icon="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/python/python-original.svg"
-          color="#3776ab"
-        />
-
-        <p>
-          Lorem ipsum dolor sit amet consectetur, adipisicing elit. Porro ipsam
-          inventore aspernatur? Molestiae ut sunt, cum enim illo quibusdam
-          asperiores rem vel laboriosam impedit quas quod.
-        </p>
-        <div>
-          <Copy
-            text="email@example.com"
-            icon="https://img.icons8.com/material-rounded/24/new-post.png"
-          />
-          <Copy
-            text="081234567890"
-            icon="https://img.icons8.com/ios-filled/50/phone.png"
-          />
-        </div>
-        <div class="mt-2">
-          <IconLink
-            text="https://github.com/RizalAlfadlil"
-            icon="https://img.icons8.com/material-rounded/48/github.png"
-          />
-          <IconLink
-            text="https://linkedin.com"
-            icon="https://img.icons8.com/material-rounded/48/linkedin.png"
-          />
-        </div>
-      </p>
+          name="nextjs"
+          icon="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/nextjs/nextjs-original.svg"
+          color="#000000"
+        />, <Chip
+          name="laravel"
+          icon="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/laravel/laravel-original.svg"
+          color="#ff2d20"
+        />, <Chip
+          name="firebase"
+          icon="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/firebase/firebase-plain.svg"
+          color="#ff8000"
+        /> and <Chip
+          name="supabase"
+          icon="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/supabase/supabase-original.svg"
+          color="#3fcf8e"
+        />.
     </section>
     <section>
-      <h2>projects</h2>
+      <h2>my works</h2>
       <hr />
-      <p>Lorem ipsum dolor sit amet consectetur adipisicing.</p>
-      <div class="grid grid-cols-3 gap-2">
-        <Image src="image.png" alt="image" title="image" url="https://example.com" />
-        <Image src="image.png" alt="image" title="image" url="https://example.com" />
-        <Image src="image.png" alt="image" title="image" url="https://example.com" />
-      </div>
-      <p>
-        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Velit
-        distinctio quas asperiores vero architecto dolores hic, sunt nesciunt,
-        reprehenderit placeat quod non. Unde deserunt expedita esse temporibus
-        nulla odit eveniet corporis exercitationem?
+      <p>freelance projects</p>
+      <Image
+        src="projectsThumbnail/fitapro.png"
+        title="aplikasi penyimpanan jurnal digital Akademi Farmasi YPF"
+        url="https://fitapro.akfarypf.ac.id/"
+      />
+      <p>academic projects</p>
+      <Image
+        src="projectsThumbnail/kalkulator.png"
+        title="kalkulator zakat"
+        url="https://kalkulator-zakat-hafidz-rizal-v2.vercel.app/"
+      />
+      <Image
+        src="projectsThumbnail/ngopi.png"
+        title="aplikasi pemesanan kopi online"
+        url="https://bisa-ngopi.vercel.app/"
+      />
+      <Image
+        src="projectsThumbnail/hotel.png"
+        title="aplikasi reservasi hotel"
+        url="https://github.com/rizalalfadlil/hotel-hebat"
+      />
+      <Image
+        src="projectsThumbnail/lelang.png"
+        title="aplikasi lelang online"
+        url="https://github.com/rizalalfadlil/lelang-online-backend"
+      />
+      <Image
+        src="projectsThumbnail/ujian.png"
+        title="aplikasi ujian online"
+        url="https://github.com/rizalalfadlil/Aplikasi"
+      />
+    </section>
+    <hr>
+    <section>
+      <p>contact me
+        </p>
+        <div>
+          <div>
+            <Copy text="rizalalfadlil@gmail.com" icon="mdi:email" />
+            <Copy text="62895360728429" icon="mdi:phone" />
+          </div>
+          <div class="mt-2">
+            <IconLink
+              text="https://github.com/RizalAlfadlil"
+              icon="mdi:github"
+            />
+            <IconLink text="https://linkedin.com" icon="mdi:linkedin" />
+          </div>
+        </div>
       </p>
     </section>
   </main>
